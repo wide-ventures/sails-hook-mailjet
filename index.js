@@ -117,7 +117,6 @@ module.exports = function mailjet(sails) {
         sendEmail: ['compileHtmlTemplate', 'compileTextTemplate', function (next, results) {
 
           var htmlEmail = results.compileHtmlTemplate;
-          console.log(htmlEmail);
           var textEmail = '';
 
           if (results.compileTextTemplate) {
@@ -128,7 +127,6 @@ module.exports = function mailjet(sails) {
             var textEmail = htmlToText.fromString(htmlEmail, {
               wordwrap: 130
             });
-            console.log(textEmail);
           }
 
           // `options`, e.g.
