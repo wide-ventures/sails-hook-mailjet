@@ -1,15 +1,18 @@
 {
-  "name": "sails-hook-email",
-  "version": "0.12.1",
-  "description": "Email hook for Sails",
+  "name": "sails-hook-mailjet",
+  "version": "0.1.0",
+  "description": "Mailjet hook for Sails",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
-    "name": "Balderdash"
+    "name": "Nuno Barreto"
   },
   "contributors": [
+    {
+      "name": "Balderdash"
+    },
     {
       "name": "Cody Stoltman"
     },
@@ -28,15 +31,17 @@
     "isHook": true
   },
   "dependencies": {
+    "async": "0.9.0",
     "ejs": "^2.3.1",
+    "html-to-text": "^2.1.0",
+    "lodash": "3.2.0",
+    "node-mailjet": "^1.1.0",
     "nodemailer": "^1.3.4",
     "nodemailer-html-to-text": "^1.0.1",
-    "nodemailer-smtp-pool": "^1.1.1",
-    "async": "0.9.0",
-    "lodash": "3.2.0"
+    "nodemailer-smtp-pool": "^1.1.1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/balderdashy/sails-hook-email.git"
+    "url": "git://github.com/wide-ventures/sails-hook-mailjet.git"
   }
 }
