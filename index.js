@@ -132,6 +132,7 @@ module.exports = function mailjet(sails) {
           // `options`, e.g.
           // {
           //   fromEmail: "somebody@example.com",
+          //   replyEmail: "somebody@example.com",
           //   fromName: "John Doe",
           //   subject: "Hello World",
           //   recipients : [
@@ -152,7 +153,10 @@ module.exports = function mailjet(sails) {
               "Subject"    : options.subject,
               "Html-part"  : htmlEmail,
               "Text-part"  : textEmail,
-              "Recipients" : options.recipients
+              "Recipients" : options.recipients,
+              "Headers"    : {
+                "Reply-To" : options.replyEmail !== undefined ? options.replyEmail : options.fromEmail
+              }
             });
 
           request
